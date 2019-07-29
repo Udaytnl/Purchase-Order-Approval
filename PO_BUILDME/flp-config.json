@@ -1,0 +1,35 @@
+{
+    "application": {
+        "id": "",
+        "title": "com.sap.build.standard.poMd.PO_BUILDME",
+        "description": "My First PO App",
+        "type": "SAP_UI5_Component",
+        "componentUrl": "/webapp",
+        "appUrl": "#PO_BUILDME-Display",
+        "navigationComponentName": "com.sap.build.standard.poMd",
+        "intentSemanticObject": "PO_BUILDME",
+        "intentAction": "Display",
+        "html5ApplicationName": "pobuildme",
+        "HCPParentApplicationName": ""
+    },
+    "assignment": {
+        "groups": [
+            "eabbf07c-01b5-4f57-a1ce-d6ed33548cda-1560284071360"
+        ],
+        "contentPackages": [
+            "233b03dd-cec6-429f-9013-39f7d9c6821d-1560284007749"
+        ],
+        "categories": []
+    },
+    "tile": {
+        "type": "StaticTile",
+        "title": "Purchase order",
+        "subtitle": "First App",
+        "searchKeywords": "Purchase order,First App",
+        "displayIconUrl": "sap-icon://approvals",
+        "displayInfoText": "",
+        "size": "1x1",
+        "serviceURL": "",
+        "refreshInterval": ""
+    }
+}

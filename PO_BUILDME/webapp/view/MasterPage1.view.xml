@@ -1,0 +1,37 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.poMd.controller.MasterPage1" xmlns="sap.m">
+    <Page title="Purchase Orders" showHeader="true" showFooter="true" showNavButton="false">
+        <content>
+        	<Toolbar enabled="true" visible="true" width="" design="Solid">
+                           <SearchField placeholder="Search" showSearchButton="true" visible="true" width="100%" liveChange="handleSOSearch"/>
+                    </Toolbar>
+            <List id="list1" mode="SingleSelectMaster" items="{path : '/listdata'}" itemPress="_onObjectListItemPress" growing="true" growingThreshold="5" growingScrollToLoad="false">
+                <!--"{path : '/listdata', sorter : { path : 'data1', descending :true }}"-->
+                <infoToolbar/>
+                <headerToolbar>
+                </headerToolbar>
+                <items>
+                    <ObjectListItem intro="Intro." title="{npnumber}" number="{ntotalvalue1}" numberUnit="USD" numberState="None" type="Active" selected="false" showMarkers="false">
+                        <attributes>
+                            <ObjectAttribute text="Company Code - {nComcode} {nccdes1}" active="false" visible="true"/>
+                            <ObjectAttribute text="Purchase org - {npodes1}" active="false" visible="true"/>
+                            <ObjectAttribute text="Vendor - {nVendor} {nVendes}" active="false" visible="true"/>
+                        </attributes>
+                       <!-- <firstStatus>
+                            <ObjectStatus text="Qty -{Orderedqty}" state="None" visible="true"/>
+                        </firstStatus>-->
+                    </ObjectListItem>
+                   
+                </items>
+            </List>
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+                <content/>
+            </OverflowToolbar>
+        </footer>
+        <headerContent>
+            <Button text="" type="Default" icon="{= ${FclRouter>/expandIcon/img}}" iconFirst="true" width="auto" enabled="true" visible="{= ${fclButton>/visible}}" tooltip="{= ${FclRouter>/expandIcon/tooltip}}" iconDensityAware="false" class="fcl-resizeButton-js" press="_onExpandButtonPress"/>
+            <Button text="" type="Default" icon="sap-icon://decline" iconFirst="true" width="auto" enabled="true" visible="{= ${fclButton>/visible}}" tooltip="Close Column" iconDensityAware="false" class="fcl-closeButton-js" press="_onCloseButtonPress"/>
+        </headerContent>
+    </Page>
+</mvc:View>
